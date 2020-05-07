@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Purchase;
 use App\Sponsorable;
 use App\SponsorableSlot;
 use App\User;
@@ -39,6 +40,8 @@ $factory->define(SponsorableSlot::class, function (Faker $faker) {
         'publish_date' => now()->addMonths(1),
     ];
 });
+
+$factory->define(Purchase::class, function (Faker $faker) {
     return [
     ];
 });
