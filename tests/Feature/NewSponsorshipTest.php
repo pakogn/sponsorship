@@ -39,11 +39,9 @@ class NewSponsorshipTest extends TestCase
     {
         $sponsorable = factory(Sponsorable::class)->create(['slug' => 'full-stack-radio']);
 
-        $sponsorableSlots = new EloquentCollection([
-            $slotA = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(10), 'sponsorable_id' => $sponsorable]),
-            $slotB = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(30), 'sponsorable_id' => $sponsorable]),
-            $slotC = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(3), 'sponsorable_id' => $sponsorable]),
-        ]);
+        $slotA = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(10), 'sponsorable_id' => $sponsorable]);
+        $slotB = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(30), 'sponsorable_id' => $sponsorable]);
+        $slotC = factory(SponsorableSlot::class)->create(['publish_date' => Carbon::now()->addDays(3), 'sponsorable_id' => $sponsorable]);
 
         $response = $this->get('/full-stack-radio/sponsorships/new');
 
