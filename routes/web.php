@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/{sponsorableSlug}/sponsorships/new', 'SponsorableSponsorshipsController@new');
+Route::post('/{sponsorableSlug}/sponsorships', 'SponsorableSponsorshipsController@store');
