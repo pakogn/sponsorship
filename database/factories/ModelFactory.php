@@ -2,9 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Purchase;
 use App\Sponsorable;
 use App\SponsorableSlot;
+use App\Sponsorship;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -41,7 +41,7 @@ $factory->define(SponsorableSlot::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(Purchase::class, function (Faker $faker) {
+$factory->define(Sponsorship::class, function (Faker $faker) {
     return [
     ];
 });
